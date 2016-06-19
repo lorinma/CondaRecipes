@@ -1,0 +1,16 @@
+package:
+  name: pugixml
+  version: 1.7
+
+source:
+  fn: v1.7.tar.gz
+  url: https://github.com/zeux/pugixml/archive/v1.7.tar.gz
+
+requirements:
+  build:
+    - cmake
+    - gcc [linux]
+  
+about:
+  home: https://github.com/zeux/pugixml
+  summary: Light-weight, simple and fast XML parser for C++ with XPath support

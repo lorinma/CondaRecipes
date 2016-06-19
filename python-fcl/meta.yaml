@@ -1,0 +1,22 @@
+package:
+  name: python-fcl
+  version: 0.4.0
+
+source:
+  fn: 0.4.0.zip
+  url: https://codeload.github.com/jf---/python-fcl/zip/jf/mesh-support-ccd
+  patches:
+    - fix.patch
+
+requirements:
+  build:
+    - cython
+    - numpy
+    - fcl 0.4.0
+  run:
+    - numpy
+    - fcl 0.4.0
+
+about:
+    home: https://github.com/jf---/python-fcl
+

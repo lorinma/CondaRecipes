@@ -1,0 +1,34 @@
+package:
+  name: gl2ps
+  version: 1.3.8
+
+source:
+  fn: new-bundle.zip [win]
+  url: https://github.com/QbProg/oce-win-bundle/archive/qb/new-bundle.zip [win]
+  fn: gl2ps-1.3.8.tgz [unix]
+  url: http://geuz.org/gl2ps/src/gl2ps-1.3.8.tgz [unix]
+  patches:
+    - installdir.patch  [win]
+
+build:
+  number: 2
+  binary_relocation: true
+  features:
+    - vc9               [win and py27]
+    - vc10              [win and py34]
+    - vc14              [win and py35]
+
+requirements:
+  build:
+    - patch             [win]
+    - zlib              [unix]
+    - cmake
+    - gcc               [linux]
+  run:
+    - zlib              [unix]
+
+
+about:
+  home: http://www.geuz.org/gl2ps/
+  license: GNU LPGL Version 2
+  summary: GL2PS, an OpenGL to PostScript printing library

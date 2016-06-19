@@ -1,0 +1,19 @@
+package:
+  name: libccd
+  version: master
+
+source:
+  fn: libccd.zip
+  url: https://codeload.github.com/danfis/libccd/zip/master
+
+build:
+  detect_binary_files_with_prefix: True
+  number: 5
+
+requirements:
+  build:
+    - cmake
+    - gcc [linux]
+
+about:
+  home: https://codeload.github.com/danfis/libccd

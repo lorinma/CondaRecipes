@@ -1,0 +1,45 @@
+package:
+  name: tigl
+  version: 2.1.7dev
+
+source:
+  fn: tigl-2.1.7dev.zip
+  url: https://github.com/DLR-SC/tigl/archive/swig.zip
+  patches:
+    - fixrpath.patch
+
+build:
+  number: 4
+  features:
+    - vc9               [win and py27]
+    - vc10              [win and py34]
+    - vc14              [win and py35]
+
+requirements:
+  build:
+    - tixi
+    - ninja
+    - python
+    - oce
+    - pythonocc-core
+    - cmake
+    - swig
+    - doxygen
+    - gcc              [linux]
+
+  run:
+    - tixi
+    - pyqt
+    - oce
+    - pythonocc-core
+    - python
+
+test:
+  imports:
+    - tigl.tiglwrapper
+    - tigl.core
+
+about:
+  home: https://github.com/DLR-SC/tigl
+  license: Apache 2.0
+  summary: The TiGL Geometry Library to process aircraft geometries in pre-design

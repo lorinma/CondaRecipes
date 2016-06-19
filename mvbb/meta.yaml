@@ -1,0 +1,23 @@
+package:
+  name: mvbb
+  version: 1.0.11dev
+
+source:
+  git_url: https://github.com/lorinma/ApproxMVBB.git
+
+requirements:
+  build:
+    - cmake
+    - eigen3 ==3.2.1
+    - pugixml
+    - meta-tiny
+    - libgcc-5 ==5.2.0
+  run:
+    - eigen3 ==3.2.1
+    - libgcc-5 ==5.2.0
+    - meta-tiny
+    - pugixml
+
+about:
+  home: https://github.com/gabyx/ApproxMVBB/
+  summary: Fast algorithms to compute an approximation of the minimal volume oriented bounding box of a point cloud in 3D

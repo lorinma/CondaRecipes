@@ -1,0 +1,20 @@
+package:
+  name: pythonocc-utils
+  version: 0.1
+
+source:
+  fn: 0.1.tar.gz
+  url: https://github.com/lorinma/pythonocc-utils/archive/0.1.tar.gz
+
+requirements:
+  build:
+    - python
+    - python-occ
+  run:
+    - python
+    - python-occ
+
+about:
+    home: https://github.com/tpaviot/pythonocc-utils
+    summary: A python package that provides useful classes/methods for pythonocc
+

@@ -1,0 +1,20 @@
+package:
+  name: octomap
+  version: 1.7.2
+
+source:
+  fn: v1.7.2.tar.gz
+  url: https://github.com/OctoMap/octomap/archive/v1.7.2.tar.gz
+
+build:
+  detect_binary_files_with_prefix: True
+  number: 5
+
+requirements:
+  build:
+    - cmake
+    - gcc [linux]
+
+about:
+  home: https://github.com/OctoMap/octomap
+  license: LGPL

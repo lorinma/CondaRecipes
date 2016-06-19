@@ -1,0 +1,11 @@
+package:
+  name: meta-tiny
+  version: 0.1
+
+source:
+  fn: 0.1.zip
+  url: https://github.com/lorinma/meta/archive/0.1.zip
+
+about:
+  home: https://github.com/ericniebler/meta
+  summary: A tiny metaprogramming library

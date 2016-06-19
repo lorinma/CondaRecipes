@@ -1,0 +1,27 @@
+package:
+  name: ifcopenshell
+  version: 0.5dev
+
+source:
+  git_url: https://github.com/IfcOpenShell/IfcOpenShell.git
+  git_tag: master
+
+requirements:
+  build:
+    - oce ==0.16
+    - python
+    - cmake
+    - swig
+    - boost
+    - qt
+
+  run:
+    - oce ==0.16
+    - python
+    - boost
+    - qt
+
+about:
+  home: https://github.com/IfcOpenShell/IfcOpenShell.git
+  license: LGPL
+  summary: Library for working with the IFC file format and the geometry

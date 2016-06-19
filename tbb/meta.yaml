@@ -1,0 +1,29 @@
+package:
+  name: tbb
+  version: 4.3.6
+
+source:
+  fn: new-bundle.zip
+  url: https://github.com/QbProg/oce-win-bundle/archive/qb/new-bundle.zip [win]
+  fn: tbb43_20141009oss_src.tgz [unix]
+  url: https://www.threadingbuildingblocks.org/sites/default/files/software_releases/source/tbb43_20141009oss_src.tgz [unix]
+  
+  patches:
+    - installdir.patch  [win]
+    - fixlinuxbuild.patch [linux]
+
+build:
+  features:
+    - vc9               [win and py27]
+    - vc10              [win and py34]
+    - vc14              [win and py35]
+
+requirements:
+  build:
+    - patch  [win]
+    - cmake  [win]
+    - gcc    [linux]
+
+about:
+  home: https://www.threadingbuildingblocks.org/
+  summary: Widely used C++ template library for task parallelism

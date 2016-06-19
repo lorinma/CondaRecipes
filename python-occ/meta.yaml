@@ -1,0 +1,41 @@
+package:
+  name: python-occ
+  version: 0.16.2
+
+source:
+  fn: 0.16.2.tar.gz
+  url: https://github.com/tpaviot/pythonocc-core/archive/0.16.2.tar.gz
+  # patches:
+  #   - fix_graphicshr_location.patch
+
+build:
+  number: 1
+  binary_relocation: true
+  features:
+    - vc9               [win and py27]
+    - vc10              [win and py34]
+    - vc14              [win and py35]
+
+requirements:
+  build:
+    - patch             [win]
+    - python
+    - oce ==0.16
+    - cmake
+    - swig
+    - gcc               [linux]
+
+  run:
+    - pyqt
+    - oce ==0.16
+    - python
+
+# test:
+#   imports:
+#     - OCC
+#     - OCC.BRepPrimAPI
+
+about:
+  home: https://github.com/tpaviot/pythonocc-core
+  license: LGPL
+  summary: A python wrapper for the OCE library

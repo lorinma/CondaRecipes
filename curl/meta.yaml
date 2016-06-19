@@ -1,0 +1,30 @@
+package:
+  name: curl
+  version: 7.46.0
+
+source:
+  fn: curl-7.46.0.tar.gz
+  url: http://curl.haxx.se/download/curl-7.46.0.tar.gz
+
+build:
+  number: 2
+  features:
+    - vc9               [win and py27]
+    - vc10              [win and py34]
+    - vc14              [win and py35]
+
+requirements:
+  build:
+    - python
+    - gcc               [linux]
+    - zlib              [unix]
+  run:
+    - zlib              [unix]
+
+test:
+  commands:
+    - curl --version
+
+about:
+  home: http://curl.haxx.se
+  summary: Curl is an open source command line tool and library for transferring data with URL syntax.

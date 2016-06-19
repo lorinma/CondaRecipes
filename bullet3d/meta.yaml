@@ -1,0 +1,19 @@
+package:
+  name: bullet3
+  version: 2.83.7
+
+source:
+  fn: 2.83.7.tar.gz
+  url: https://github.com/bulletphysics/bullet3/archive/2.83.7.tar.gz
+
+build:
+  detect_binary_files_with_prefix: True
+  number: 5
+
+requirements:
+  build:
+    - cmake
+    - gcc [linux]
+
+about:
+  home: https://github.com/bulletphysics/bullet3

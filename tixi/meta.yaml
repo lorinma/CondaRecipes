@@ -1,0 +1,38 @@
+package:
+  name: tixi
+  version: 2.2.3
+
+source:
+  fn: tixi-2.2.3.tar.gz
+  url: https://github.com/DLR-SC/tixi/archive/v2.2.3.tar.gz
+  patches:
+    - install.patch
+
+build:
+  number: 1
+  features:
+    - vc9               [win and py27]
+    - vc10              [win and py34]
+    - vc14              [win and py35]
+
+requirements:
+  build:
+    - python
+    - curl
+    - libxml2
+    - libxslt
+    - gcc                [linux]
+
+  run:
+    - curl               [unix]
+    - libxml2            [unix]
+    - libxslt            [unix]
+
+test:
+  commands:
+    - tixiDemo
+
+about:
+  home: https://github.com/DLR-SC/tixi
+  license: Apache 2.0
+  summary: Fast and simple XML interface library
