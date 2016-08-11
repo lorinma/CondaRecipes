@@ -1,22 +1,32 @@
 package:
   name: python-fcl
-  version: 0.4.0
+  version: 0.4.1
 
 source:
-  fn: 0.4.0.zip
-  url: https://codeload.github.com/jf---/python-fcl/zip/jf/mesh-support-ccd
-  patches:
-    - fix.patch
+  git_url: https://github.com/lorinma/python-fcl.git
+  git_tag: jf/mesh-support-ccd
+
+
+build:
+   number: 2
+   binary_relocation: true # (defaults to true)
 
 requirements:
   build:
+    - python
     - cython
     - numpy
-    - fcl 0.4.0
+    - flann
+    - libccd
+    - fcl
   run:
+    - python
     - numpy
-    - fcl 0.4.0
+    - flann
+    - libccd
+    - fcl
 
 about:
-    home: https://github.com/jf---/python-fcl
-
+  home: https://github.com/lorinma/python-fcl
+  license: BSD
+  summary: This library is a Python binding of FCL library
